@@ -15,8 +15,6 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css"> -->
-        <!-- <link rel="stylesheet" href="assets/css/flexslider.css"> -->
         <link rel="stylesheet" href="assets/css/font-awesome.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets//css/auth-modal.css">
@@ -26,24 +24,12 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <!-- Favicon and touch icons -->
-        <!-- <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"> -->
-
     </head>
 
     <body>
         <div style="text-align:center">
-  
-            <h2>Tabbed Image Gallery</h2>
-            <p>Click on the images below:</p>
-            <a href="#openModal1" id="login-btn1">Войти</a>
+            
             <input type="file" id="file1">
-            <button class="btn1">Открыть</button>
-            <button class="btn1 primary1">Загрузить</button>
           </div>
           <div id="openModal1" class="modal1">
             <div class="modal-dialog1">
@@ -68,6 +54,8 @@
               </div>
             </div>
           </div>
+
+          <div id="uploadModal" class="modal1"></div>
         <!-- Header -->
         <div class="container">
             <div class="header row">
@@ -85,14 +73,18 @@
                             <div class="nav-collapse collapse">
                                 <ul class="nav pull-right">
                                     <li>
-                                        <a href="index.html"><i class="icon-home"></i><br />Home</a>
+                                        <a href="index.html"><i class="icon-home"></i><br />На главную</a>
                                     </li>
-                                    <li class="current-page">
-                                        <a href="portfolio.html"><i class="icon-camera"></i><br />Portfolio</a>
+                                    <li class="current-page" id="portfolio">
+                                        <a href="portfolio.html"><i class="icon-camera"></i><br />Портфолио</a>
                                     </li>
 
                                     <li>
-                                        <a href="about.html"><i class="icon-user"></i><br />About</a>
+                                        <a href="about.html"><i class="icon-user"></i><br />Об авторе</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="add-page.html" id="login-btn1"><i class="icon-user"></i><br />Войти</a>
                                     </li>
 
                                 </ul>
@@ -109,20 +101,32 @@
                 <div class="row flex-row">
                     <div class="span12 flex-span">
                         <a href="./index.html">
-                            <i class="icon-camera page-title-icon"></i>
+                            <i class="icon-home page-title-icon"></i>
                             <h2 class="links">На главную</h2>
                         </a>
                     </div>
-                    <div class="span12 flex-span">
+                    <div class="span12 flex-span" id="portfolio">
                         <a href="./portfolio.html">
-                            <i class="icon-camera page-title-icon"></i>
+                            <i class="icon-camera page-title-icon active-page"></i>
                             <h2 class="links">Портфолио</h2>
                         </a>
                     </div>
                     <div class="span12 flex-span">
                         <a href="./about.html">
-                            <i class="icon-camera page-title-icon"></i>
+                            <i class="icon-user page-title-icon"></i>
                             <h2 class="links">Об авторе</h2>
+                        </a>
+                    </div>
+                    <div id="log-btn" class="span12 flex-span" style="display: block;">
+                        <a href="#openModal1" id="login-btn1">
+                            <i class="icon-user page-title-icon"></i>
+                            <h2 class="links">Войти</h2>
+                        </a>
+                    </div>
+                    <div id="add-img" class="span12 flex-span" style="display: none;">
+                        <a href="" class="btn-for-add">
+                            <i class="icon-user page-title-icon"></i>
+                            <h2 class="links">Добавить</h2>
                         </a>
                     </div>
                 </div>
@@ -166,12 +170,6 @@
                     <div class="copyright span4">
                         <p>Copyright 2012 Andia - All rights reserved. Template by <a href="http://azmind.com">Azmind</a>.</p>
                     </div>
-                    <div class="social span8">
-                        <a class="facebook" href=""></a>
-                        <a class="dribbble" href=""></a>
-                        <a class="twitter" href=""></a>
-                        <a class="pinterest" href=""></a>
-                    </div>
                 </div>
             </div>
             <!-- The Modal -->
@@ -193,12 +191,12 @@
         <script src="assets/js/jquery.quicksand.js"></script> -->
         <!-- <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script> -->
         <!-- <script src="assets/js/scripts.js"></script> -->
-<!--         
-        <script defer src="assets/js/upload.js"></script>
+        
+        <!-- <script defer src="assets/js/upload.js"></script>
         <script defer src="assets/js/app.js"></script>
         <script defer src="assets/js/settingUp.js"></script>
         <script defer src="assets/js/modal.js"></script> -->
-        <script src="js/bundle.js"></script>
+        <script src="./js/bundle.js"></script>
     </body>
 
 </html>
